@@ -34,7 +34,7 @@ async def check_youtube_live():
             if video_id != last_live_video_id:
                 channel = client.get_channel(DISCORD_CHANNEL_ID)
                 if channel:
-                    await channel.send(f"🔴 **{title}** is LIVE now!\n📺 Watch here: {link}")
+                    await channel.send(f"@everyone 🔴 **{title}** is LIVE now!\n📺 Watch here: {link}")
                     last_live_video_id = video_id
         else:
             print("No live video found.")
